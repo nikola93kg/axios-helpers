@@ -11,12 +11,14 @@ function App() {
 
   const [posts, setPosts] = useState([]);
 
+  const fetchPosts = async () => {
+    let response = await client.get('?_limit=10');
+    setPosts(response.data)
+  }
+
   useEffect(() => {
-    client.get('?_limit=10')
-      .then((response) => {
-        setPosts(response.data)
-      })
-  }, []);
+    fetchPosts()
+  }, [])
 
   console.log(posts)
 
