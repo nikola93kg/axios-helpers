@@ -1,4 +1,4 @@
-const phones = [
+ [
     {
         id: 1,
         image: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note10-pro.jpg',
@@ -71,4 +71,3 @@ const phones = [
     },
 ];
 
-export default phones;
